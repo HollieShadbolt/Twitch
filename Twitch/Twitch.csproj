@@ -13,7 +13,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="HttpRequestMessageHandler" Version="0.0.7" />
+      <PackageReference Include="HttpRequestMessageHandler" Version="1.0.0" />
     </ItemGroup>
 
 </Project>
