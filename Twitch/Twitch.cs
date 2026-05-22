@@ -11,6 +11,8 @@ public sealed class Twitch(
     private const string Scheme = "Bearer";
     private const string Uri = "https://api.twitch.tv/helix";
 
+    /// <inheritdoc/>
+    /// <exception cref="TaskCanceledException">The cancellation token was cancelled.</exception>
     public async Task<Responses.Stream?> GetStreamAsync(CancellationToken cancellationToken)
     {
         var httpRequestMessageFactory = GetGetStreamsHttpRequestMessage;
@@ -23,6 +25,8 @@ public sealed class Twitch(
         return streams.Data.SingleOrDefault();
     }
 
+    /// <inheritdoc/>
+    /// <exception cref="TaskCanceledException">The cancellation token was cancelled.</exception>
     public async Task SendAnnouncementAsync(
         SendAnnouncementAsyncParams sendAnnouncementAsyncParams,
         CancellationToken cancellationToken)
